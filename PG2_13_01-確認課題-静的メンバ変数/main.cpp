@@ -22,7 +22,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 	//enemyのインスタンス↓
 	Enemy* enemy[ENEMY_NUM];
-	GameObject enemyObject[ENEMY_NUM] = { {{0,300},{-5,5},16,true},{ {200,500},{-5,5},16 ,true} };
+	GameObject enemyObject[ENEMY_NUM] = { {{0,300},{-5,5},16},{ {200,500},{-5,5},16} };
 	for (int i = 0; i < ENEMY_NUM; i++) {
 		if (i == 0) {
 			enemy[i] = new EnemyA(enemyObject[i]);
