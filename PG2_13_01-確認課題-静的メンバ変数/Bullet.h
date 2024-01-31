@@ -2,6 +2,7 @@
 #include <Novice.h>
 #include "Struct.h"
 #include "Collision.h"
+#include "Enemy.h"
 class Bullet
 {
 private:
@@ -50,7 +51,7 @@ public:
 	/// </summary>
 	/// <param name="object"></param>
 	/// <param name="isHit"></param>
-	void IsHit(GameObject enemy, bool *isHit);
+	void IsHit(GameObject enemy);
 
 	/// <summary>
 	/// 描画
@@ -65,6 +66,6 @@ public:
 	/// <param name="position"></param>
 	/// <param name="object"></param>
 	/// <param name="isHit"></param>
-	void Update(char* keys, char* preKeys, Vector2 position, GameObject object, bool* isHit);
+	void Update(char* keys, char* preKeys, Vector2 position, GameObject object);
 };
 

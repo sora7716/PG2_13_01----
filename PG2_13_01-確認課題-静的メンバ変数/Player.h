@@ -42,6 +42,6 @@ public:
 	/// <param name="preKeys"></param>
 	/// <param name="object"></param>
 	/// <param name="isHit"></param>
-	void Update(char *keys,char *preKeys, GameObject object, bool *isHit);
+	void Update(char *keys,char *preKeys, GameObject object);
 };
 

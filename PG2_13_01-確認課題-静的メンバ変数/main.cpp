@@ -49,12 +49,13 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 		for (int i = 0; i < ENEMY_NUM; i++) {
 			enemy[i]->Update();//エネミーの処理
-		    player->Update(keys,preKeys,enemy[i]->GetGameObject(), &Enemy::isAlive);//プレイヤーと弾の処理
+		    player->Update(keys,preKeys,enemy[i]->GetGameObject());//プレイヤーと弾の処理
 			//リセット
 		    if (keys[DIK_R] && !preKeys[DIK_R]) {
 		    	Enemy::isAlive = true;
 		    }
 		}
+		Novice::ScreenPrintf(0, 0, "%d", Enemy::isAlive);
 		///
 		/// ↑更新処理ここまで
 		///

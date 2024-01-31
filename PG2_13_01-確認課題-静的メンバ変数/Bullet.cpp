@@ -51,10 +51,10 @@ void Bullet::Translate() {
 	}
 }
 
-void Bullet::IsHit(GameObject enemy,bool *isHit) {
+void Bullet::IsHit(GameObject enemy) {
 	for (int i = 0; i < BULLET_NUM; i++) {
 		if (collision_->Box(bullet_[i], enemy)) {
-			*isHit = false;
+			Enemy::isAlive = false;
 		}
 	}
 }
@@ -68,9 +68,9 @@ void Bullet::Draw() {
 	}
 }
 
-void Bullet::Update(char* keys, char* preKeys, Vector2 position, GameObject object,bool *isHit) {
+void Bullet::Update(char* keys, char* preKeys, Vector2 position, GameObject object) {
 	Spawn(keys,preKeys,position);
 	Translate();
-	IsHit(object, isHit);
+	IsHit(object);
 	Draw();
 }

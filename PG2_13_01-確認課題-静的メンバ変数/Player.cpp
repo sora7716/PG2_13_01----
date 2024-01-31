@@ -43,9 +43,9 @@ void Player::Draw() {
 	);
 }
 
-void Player::Update(char* keys,char* preKeys,GameObject object,bool *isHit) {
+void Player::Update(char* keys,char* preKeys,GameObject object) {
 	Translate();
 	Move(keys);
-	bullet_->Update(keys,preKeys,player_.position,object,isHit);
+	bullet_->Update(keys,preKeys,player_.position,object);
 	Draw();
 }
